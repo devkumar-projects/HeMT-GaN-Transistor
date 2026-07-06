@@ -1,0 +1,81 @@
+version = "2.22";
+date_creation = "2018-06-13 13:58:49";
+date_modification = "2022-04-13 09:44:59";
+
+Resolution
+{
+   nombre_iteration_maximum_newton = 40;
+   pourcentage_sauvegarde = 1;
+   nombre_iteration_maximum_gmres = 50;
+   nombre_processeur = 1;
+   precision_resolution_systeme_lineaire = 1e-06;
+   precision_resolution_equation = 1e-08;
+   methode_suppression_dl = sans_supression;
+
+   seuil_precision_psi = 1e-06 V;
+   seuil_precision_n = 1e+06 /cm3;
+   seuil_precision_p = 1e+06 /cm3;
+   seuil_precision_nt = 1e+06 /cm3;
+   seuil_precision_pt = 1e+06 /cm3;
+
+   Temps
+   {
+      analysis = stationary;
+   } // Temps
+
+   Temperature
+   {
+      type = constante;
+      constant_value = 300 K;
+   } // Temperature
+
+   Bias
+   {
+      nom_reference = Source;
+      reference = 0x564ab1cfb9e0;
+      type = constante;
+      constant_value = 0 V;
+   } // Bias
+
+   Bias
+   {
+      nom_reference = Drain;
+      reference = 0x564ab24be030;
+      type = constante;
+      constant_value = 1 V;
+   } // Bias
+
+   Bias
+   {
+      nom_reference = Substrate;
+      reference = 0x564aae2cf610;
+      type = constante;
+      constant_value = 0 V;
+   } // Bias
+
+   Bias
+   {
+      nom_reference = Gate;
+      reference = 0x564ab23fab40;
+      type = rampe_stationnaire;
+      start_value = 0 V;
+      end_value = 5 V;
+      increment = 0.1 V;
+   } // Bias
+
+} // Resolution
+
+Dispositif
+{
+   type_maillage = raffinement_relachement;
+   nombre_maximum_noeud = 100000;
+   longueur_minimum_arete = 0.01 um;
+   longueur_maximum_arete = 1e+206 um;
+   precision_espace = 0.01;
+   critere_relachement = 0.01;
+
+} // Dispositif
+
+information_stimuli = "";
+information_resultat = "";
+

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+results/
+*.log
+*.res
+*.out
+*.tmp
+data/*.csv
+!data/README.md

@@ -1,0 +1,8 @@
+test_device_metadata (test_ecorce_deck.EcorceDeckTests.test_device_metadata) ... ok
+test_device_stimulus_references_match (test_ecorce_deck.EcorceDeckTests.test_device_stimulus_references_match) ... ok
+test_transfer_stimulus (test_ecorce_deck.EcorceDeckTests.test_transfer_stimulus) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.012s
+
+OK

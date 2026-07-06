@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the research report."
+title: "VertiGaN: Conceptual Design and Finite-Element Assessment of a Dual-Channel Vertical Normally-Off GaN Power Transistor"
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Dev
+year: 2022
+repository-code: "https://github.com/devkumar-projects/HeMT-GaN-Transistor"
+license: MIT
+keywords:
+  - GaN
+  - HEMT
+  - vertical transistor
+  - Ecorce
+  - TCAD
+  - finite element
+  - power electronics

@@ -1,0 +1,967 @@
+version = "2.22";
+date_creation = "2018-06-13 13:58:49";
+date_modification = "2022-04-13 09:44:57";
+
+liste_unite = "Deg pC s /ns J eV MeV/mm kHz V MV/cm A A/um A/cm2 um cm2 cm3 cm/s cm3/s /um /cm2 /cm3 /cm4 /cm2/s /cm3/s g g/cm3 rad/s rad /rad/cm3 cm2/V/s Rel. W W/cm W/cm2 W/cm3 K K/um J/kg/K S/cm W/m/K W/m2/K Ω Ω.μm Ω.μm2 ";
+
+Resolution
+{
+   dimension = dim_2;
+   methode_discretisation = box_method;
+   poisson = true;
+   transport_n = true;
+   transport_p = true;
+   piegeage_n = true;
+   nombre_niveau_otn = 1;
+   piegeage_p = true;
+   nombre_niveau_otp = 1;
+
+   ecorce_personnalise = false;
+
+   Donor
+   {
+      sous_domaine = 0x564ab1f0d5c0;
+      nom = "n_substrate";
+      type = gaussian;
+      constant_value = 1 /cm3;
+      x_min = 0 um;
+      y_min = 0 um;
+      z_min = 0 um;
+      x_max = 1 um;
+      y_max = 0.25 um;
+      z_max = 0 um;
+      sigma_x = 1e-14 um;
+      sigma_y = 1e-14 um;
+      sigma_z = 1e-14 um;
+      value_distance_x = 0 /cm3;
+      value_distance_y = 0 /cm3;
+      value_distance_z = 0 /cm3;
+      distance_x = 0.01 um;
+      distance_y = 0.01 um;
+      distance_z = 0.01 um;
+   } // Donor
+
+   Donor
+   {
+      sous_domaine = 0x564ab12db3c0;
+      nom = "Gan";
+      type = gaussian;
+      constant_value = 1e+16 /cm3;
+      x_min = 0 um;
+      y_min = 0.25 um;
+      z_min = 0 um;
+      x_max = 1 um;
+      y_max = 0.434 um;
+      z_max = 0 um;
+      sigma_x = 1e-14 um;
+      sigma_y = 1e-14 um;
+      sigma_z = 1e-14 um;
+      value_distance_x = 0 /cm3;
+      value_distance_y = 0 /cm3;
+      value_distance_z = 0 /cm3;
+      distance_x = 0.01 um;
+      distance_y = 0.01 um;
+      distance_z = 0.01 um;
+   } // Donor
+
+   Trap_n
+   {
+      niveau = 0;
+      sous_domaine = 0x564ab2058250;
+      nom = "Trap_n";
+      type = gaussian;
+      constant_value = 1e+19 /cm3;
+      x_min = 0.1 um;
+      y_min = 0.434 um;
+      z_min = 0 um;
+      x_max = 0.9 um;
+      y_max = 0.45 um;
+      z_max = 0 um;
+      sigma_x = 1e-14 um;
+      sigma_y = 1e-14 um;
+      sigma_z = 1e-14 um;
+      value_distance_x = 0 /cm3;
+      value_distance_y = 0 /cm3;
+      value_distance_z = 0 /cm3;
+      distance_x = 0.01 um;
+      distance_y = 0.01 um;
+      distance_z = 0.01 um;
+   } // Trap_n
+
+   Trap_p
+   {
+      niveau = 0;
+      sous_domaine = 0x564ab2058250;
+      nom = "Trap_p";
+      type = gaussian;
+      constant_value = 1e+19 /cm3;
+      x_min = 0.1 um;
+      y_min = 0.434 um;
+      z_min = 0 um;
+      x_max = 0.9 um;
+      y_max = 0.45 um;
+      z_max = 0 um;
+      sigma_x = 1e-14 um;
+      sigma_y = 1e-14 um;
+      sigma_z = 1e-14 um;
+      value_distance_x = 0 /cm3;
+      value_distance_y = 0 /cm3;
+      value_distance_z = 0 /cm3;
+      distance_x = 0.01 um;
+      distance_y = 0.01 um;
+      distance_z = 0.01 um;
+   } // Trap_p
+
+   band_to_band_tunneling = false;
+   tunneling_interface_current = false;
+   duree_vie_fonction_dopant = true;
+   recombinaison_schockley_read_hall = true;
+   recombinaison_auger = false;
+   recombinaison_radiative = false;
+   mobilite_fonction_dopant = true;
+   mobilite_fonction_champ_electrique_parallele = true;
+   mobilite_fonction_champ_electrique_perpendiculaire = false;
+   mobilite_fonction_porteur = false;
+   gap_fonction_dopant = false;
+   fonction_yield = true;
+   energy_pair_function_electric_field = false;
+   ionisation_impact = false;
+   schottky_fonction_champ_electrique = false;
+   piegeage_fonction_courant_transport = false;
+   sigma_fonction_champ_electrique = true;
+
+} // Resolution
+
+Dispositif
+{
+
+   Node
+   {
+      adresse = 0x55bbfa8e26d0;
+      x = 0 um;
+      y = 0.248 um;
+      z = 0 um;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbfac429c0;
+      x = 1 um;
+      y = 0.248 um;
+      z = 0 um;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf8174b70;
+      x = 1 um;
+      y = 0 um;
+      z = 0 um;
+      reference = 0x564aae2cf610;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf635e6e0;
+      x = 0 um;
+      y = 0 um;
+      z = 0 um;
+      reference = 0x564aae2cf610;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf2bf99e0;
+      x = 0 um;
+      y = 0.434 um;
+      z = 0 um;
+      reference = 0x564ab1cfb9e0;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf89fbd80;
+      x = 1 um;
+      y = 0.434 um;
+      z = 0 um;
+      reference = 0x564ab24be030;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf2d90fb0;
+      x = 0.1 um;
+      y = 0.434 um;
+      z = 0 um;
+      reference = 0x564ab1cfb9e0;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbfeb2fb40;
+      x = 0.9 um;
+      y = 0.434 um;
+      z = 0 um;
+      reference = 0x564ab24be030;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf2c2ea10;
+      x = 0.3 um;
+      y = 0.45 um;
+      z = 0 um;
+      reference = 0x564ab23fab40;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf890c520;
+      x = 0.7 um;
+      y = 0.45 um;
+      z = 0 um;
+      reference = 0x564ab23fab40;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbf6655650;
+      x = 0.9 um;
+      y = 0.45 um;
+      z = 0 um;
+   } // Node
+
+   Node
+   {
+      adresse = 0x55bbfa9be0b0;
+      x = 0.1 um;
+      y = 0.45 um;
+      z = 0 um;
+   } // Node
+
+
+   Line
+   {
+      adresse = 0x564aabce3a70;
+
+      point_depart = 0x55bbfac429c0;
+      point_arrivee = 0x55bbf8174b70;
+      Derivee_depart
+      {
+         adresse = 0x55bbf93efa00;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf93efa20;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfaf22b90;
+         sens = INVERSE;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564aabcd51d0;
+
+      point_depart = 0x55bbf2d90fb0;
+      point_arrivee = 0x55bbfa9be0b0;
+      Derivee_depart
+      {
+         adresse = 0x55bbf2b6d3e0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf2b6d400;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfadef500;
+         sens = INVERSE;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564ab20fad00;
+
+      point_depart = 0x55bbf2c2ea10;
+      point_arrivee = 0x55bbf890c520;
+      Derivee_depart
+      {
+         adresse = 0x55bbf76552c0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf76552e0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfadef500;
+         sens = INVERSE;
+      }
+
+      reference = 0x564ab23fab40;
+   } // Line
+
+   Line
+   {
+      adresse = 0x564ab1f0cac0;
+
+      point_depart = 0x55bbf890c520;
+      point_arrivee = 0x55bbf6655650;
+      Derivee_depart
+      {
+         adresse = 0x55bbf6354d40;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf6354d60;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfadef500;
+         sens = INVERSE;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564aab0de290;
+
+      point_depart = 0x55bbfeb2fb40;
+      point_arrivee = 0x55bbf89fbd80;
+      Derivee_depart
+      {
+         adresse = 0x55bbeb525640;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbeb525660;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbf85f31d0;
+         sens = INVERSE;
+      }
+
+      reference = 0x564ab24be030;
+   } // Line
+
+   Line
+   {
+      adresse = 0x564aab441020;
+
+      point_depart = 0x55bbf2d90fb0;
+      point_arrivee = 0x55bbf2bf99e0;
+      Derivee_depart
+      {
+         adresse = 0x55bbfa25fa30;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbfa25fa50;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbf85f31d0;
+         sens = DIRECT;
+      }
+
+      reference = 0x564ab1cfb9e0;
+   } // Line
+
+   Line
+   {
+      adresse = 0x564ab1dd9370;
+
+      point_depart = 0x55bbf2bf99e0;
+      point_arrivee = 0x55bbfa8e26d0;
+      Derivee_depart
+      {
+         adresse = 0x55bbf88bf7f0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf88bf810;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbf85f31d0;
+         sens = DIRECT;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564ab2003770;
+
+      point_depart = 0x55bbfa8e26d0;
+      point_arrivee = 0x55bbfac429c0;
+      Derivee_depart
+      {
+         adresse = 0x55bbf2c17af0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf2c17b10;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbf85f31d0;
+         sens = DIRECT;
+      }
+
+      surface
+      {
+         adresse = 0x55bbfaf22b90;
+         sens = INVERSE;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564ab10995e0;
+
+      point_depart = 0x55bbf8174b70;
+      point_arrivee = 0x55bbf635e6e0;
+      Derivee_depart
+      {
+         adresse = 0x55bbfa55b0f0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbfa55b110;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfaf22b90;
+         sens = INVERSE;
+      }
+
+      reference = 0x564aae2cf610;
+   } // Line
+
+   Line
+   {
+      adresse = 0x564aab453190;
+
+      point_depart = 0x55bbf635e6e0;
+      point_arrivee = 0x55bbfa8e26d0;
+      Derivee_depart
+      {
+         adresse = 0x55bbf8a01110;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf8a01130;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfaf22b90;
+         sens = INVERSE;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564aabcd3460;
+
+      point_depart = 0x55bbf89fbd80;
+      point_arrivee = 0x55bbfac429c0;
+      Derivee_depart
+      {
+         adresse = 0x55bbf91b8cd0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf91b8cf0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbf85f31d0;
+         sens = INVERSE;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564ab1f4d950;
+
+      point_depart = 0x55bbfeb2fb40;
+      point_arrivee = 0x55bbf2d90fb0;
+      Derivee_depart
+      {
+         adresse = 0x55bbfa93b8d0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbfa93b8f0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfadef500;
+         sens = INVERSE;
+      }
+
+      surface
+      {
+         adresse = 0x55bbf85f31d0;
+         sens = DIRECT;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564abdd2f340;
+
+      point_depart = 0x55bbf6655650;
+      point_arrivee = 0x55bbfeb2fb40;
+      Derivee_depart
+      {
+         adresse = 0x55bbf9ee3530;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf9ee3550;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfadef500;
+         sens = DIRECT;
+      }
+
+   } // Line
+
+   Line
+   {
+      adresse = 0x564abd3d6b80;
+
+      point_depart = 0x55bbfa9be0b0;
+      point_arrivee = 0x55bbf2c2ea10;
+      Derivee_depart
+      {
+         adresse = 0x55bbf38eccb0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_depart
+
+      Derivee_arrivee
+      {
+         adresse = 0x55bbf38eccd0;
+         x = 0 um;
+         y = 0 um;
+         z = 0 um;
+      } // Derivee_arrivee
+
+      surface
+      {
+         adresse = 0x55bbfadef500;
+         sens = DIRECT;
+      }
+
+   } // Line
+
+
+   Surface
+   {
+      adresse = 0x55bbfadef500;
+
+      ligne
+      {
+         adresse = 0x564abd3d6b80;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564aabcd51d0;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564ab1f4d950;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564abdd2f340;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564ab1f0cac0;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564ab20fad00;
+         sens = INVERSE;
+      }
+
+      sous_domaine = 0x564ab2058250;
+   } // Surface
+
+   Surface
+   {
+      adresse = 0x55bbf85f31d0;
+
+      ligne
+      {
+         adresse = 0x564ab2003770;
+         sens = DIRECT;
+      }
+
+      ligne
+      {
+         adresse = 0x564aabcd3460;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564aab0de290;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564ab1f4d950;
+         sens = DIRECT;
+      }
+
+      ligne
+      {
+         adresse = 0x564aab441020;
+         sens = DIRECT;
+      }
+
+      ligne
+      {
+         adresse = 0x564ab1dd9370;
+         sens = DIRECT;
+      }
+
+      sous_domaine = 0x564ab12db3c0;
+   } // Surface
+
+   Surface
+   {
+      adresse = 0x55bbfaf22b90;
+
+      ligne
+      {
+         adresse = 0x564ab2003770;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564aab453190;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564ab10995e0;
+         sens = INVERSE;
+      }
+
+      ligne
+      {
+         adresse = 0x564aabce3a70;
+         sens = INVERSE;
+      }
+
+      sous_domaine = 0x564ab1f0d5c0;
+   } // Surface
+
+
+
+   Reference
+   {
+      nom = "Source";
+      type = ohmique;
+      adresse = 0x564ab1cfb9e0;
+
+      fixed_surface_charge = 0 /cm2;
+      resistance_serie = 0 Ω.μm;
+      vitesse_recombinaison_n = 0 cm/s;
+      vitesse_recombinaison_p = 0 cm/s;
+   } // Reference
+
+   Reference
+   {
+      nom = "Gate";
+      type = schottky;
+      nom_materiau = "Cust";
+      adresse = 0x564ab23fab40;
+
+      fixed_surface_charge = 0 /cm2;
+      travail_sortie_metal = 5 eV;
+      resistance_serie = 0 Ω.μm;
+      vitesse_recombinaison_n = 2.573e+06 cm/s;
+      vitesse_recombinaison_p = 1.93e+06 cm/s;
+   } // Reference
+
+   Reference
+   {
+      nom = "Drain";
+      type = ohmique;
+      adresse = 0x564ab24be030;
+
+      fixed_surface_charge = 0 /cm2;
+      resistance_serie = 0 Ω.μm;
+      vitesse_recombinaison_n = 0 cm/s;
+      vitesse_recombinaison_p = 0 cm/s;
+   } // Reference
+
+   Reference
+   {
+      nom = "Substrate";
+      type = ohmique;
+      adresse = 0x564aae2cf610;
+
+      fixed_surface_charge = 0 /cm2;
+      resistance_serie = 0 Ω.μm;
+      vitesse_recombinaison_n = 0 cm/s;
+      vitesse_recombinaison_p = 0 cm/s;
+   } // Reference
+
+
+   Sous_domaine
+   {
+      nom = "AlGaN";
+      nom_fichier = "AlGaN";
+      nom_materiau = "AlGaN";
+      couleur = "00FF00";
+      adresse = 0x564ab2058250;
+
+      epsilon = 11.9 Rel.;
+      mobilite_n = 300 cm2/V/s;
+      duree_vie_n = 0.000395 s;
+      champ_critique_n = 0.3 MV/cm;
+      vitesse_saturation_n = 1.1e+07 cm/s;
+      masse_effective_n = 0.98;
+      masse_effective_p = 0.16;
+      masse_effective_hp = 1672;
+      gap = 4.39 eV;
+      affinite_electronique = 3.41 eV;
+      facteur_generation = 4e+13 /rad/cm3;
+      mobilite_p = 450 cm2/V/s;
+      duree_vie_p = 3.52e-05 s;
+      champ_critique_p = 0.3 MV/cm;
+      vitesse_saturation_p = 9.5e+06 cm/s;
+      energy_trap_n0 = 1.2 eV;
+      sigma_capture_n0 = 1e-14 cm2;
+      sigma_recombinaison_n0 = 4.8e-12 cm2;
+      energy_trap_p0 = 1.5 eV;
+      sigma_capture_p0 = 1.5e-13 cm2;
+      sigma_recombinaison_p0 = 1.6e-12 cm2;
+   } // Sous_domaine
+
+   Sous_domaine
+   {
+      nom = "GaN";
+      nom_fichier = "GaN";
+      nom_materiau = "GaN";
+      couleur = "32CD32";
+      adresse = 0x564ab12db3c0;
+
+      epsilon = 11.9 Rel.;
+      mobilite_n = 1000 cm2/V/s;
+      duree_vie_n = 0.000395 s;
+      champ_critique_n = 5 MV/cm;
+      vitesse_saturation_n = 3e+07 cm/s;
+      masse_effective_n = 0.2;
+      masse_effective_p = 0.82;
+      masse_effective_hp = 1672;
+      gap = 3.2 eV;
+      affinite_electronique = 4.1 eV;
+      facteur_generation = 4e+13 /rad/cm3;
+      mobilite_p = 200 cm2/V/s;
+      duree_vie_p = 3.52e-05 s;
+      champ_critique_p = 0.3 MV/cm;
+      vitesse_saturation_p = 9.5e+06 cm/s;
+      energy_trap_n0 = 0.2 eV;
+      sigma_capture_n0 = 1e-14 cm2;
+      sigma_recombinaison_n0 = 4.8e-12 cm2;
+      energy_trap_p0 = 0.2 eV;
+      sigma_capture_p0 = 1.5e-13 cm2;
+      sigma_recombinaison_p0 = 1.6e-12 cm2;
+   } // Sous_domaine
+
+   Sous_domaine
+   {
+      nom = "Substrate";
+      nom_fichier = "Si";
+      nom_materiau = "Si";
+      couleur = "E87400";
+      adresse = 0x564ab1f0d5c0;
+
+      epsilon = 11.9 Rel.;
+      mobilite_n = 1500 cm2/V/s;
+      duree_vie_n = 0.000395 s;
+      champ_critique_n = 0.3 MV/cm;
+      vitesse_saturation_n = 1.1e+07 cm/s;
+      masse_effective_n = 0.98;
+      masse_effective_p = 0.16;
+      masse_effective_hp = 1672;
+      gap = 1.12 eV;
+      affinite_electronique = 4.01 eV;
+      facteur_generation = 4e+13 /rad/cm3;
+      mobilite_p = 450 cm2/V/s;
+      duree_vie_p = 3.52e-05 s;
+      champ_critique_p = 0.3 MV/cm;
+      vitesse_saturation_p = 9.5e+06 cm/s;
+      energy_trap_n0 = 0.2 eV;
+      sigma_capture_n0 = 1e-14 cm2;
+      sigma_recombinaison_n0 = 4.8e-12 cm2;
+      energy_trap_p0 = 0.2 eV;
+      sigma_capture_p0 = 1.5e-13 cm2;
+      sigma_recombinaison_p0 = 1.6e-12 cm2;
+   } // Sous_domaine
+
+   Interface
+   {
+      nom_fichier = "default_interface";
+      material1 = 0x564ab12db3c0;
+      material2 = 0x564ab1f0d5c0;
+      adresse = 0x55bbfaa94e90;
+
+      fixed_surface_charge = 0 /cm2;
+   } // Interface
+
+   Interface
+   {
+      nom_fichier = "AlGaN-GaN";
+      material1 = 0x564ab2058250;
+      material2 = 0x564ab12db3c0;
+      adresse = 0x55bbfaa94f30;
+
+      fixed_surface_charge = 7.3e+11 /cm2;
+   } // Interface
+
+
+} // Dispositif
+
+information_dispositif = "";
+

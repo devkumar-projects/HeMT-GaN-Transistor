@@ -1,0 +1,145 @@
+{
+  "directory": "/mnt/data/HeMT-GaN-Transistor/models/ecorce/lateral-gan-hemt",
+  "devices": [
+    {
+      "path": "/mnt/data/HeMT-GaN-Transistor/models/ecorce/lateral-gan-hemt/device.dev",
+      "format_version": "2.22",
+      "created": "2018-06-13 13:58:49",
+      "modified": "2022-04-13 09:44:57",
+      "dimension": "dim_2",
+      "discretisation": "box_method",
+      "enabled_physics": {
+        "poisson": true,
+        "transport_n": true,
+        "transport_p": true,
+        "piegeage_n": true,
+        "piegeage_p": true,
+        "band_to_band_tunneling": false,
+        "ionisation_impact": false,
+        "recombinaison_schockley_read_hall": true,
+        "recombinaison_auger": false,
+        "mobilite_fonction_champ_electrique_parallele": true
+      },
+      "contacts": [
+        {
+          "name": "Source",
+          "contact_type": "ohmique",
+          "address": "0x564ab1cfb9e0"
+        },
+        {
+          "name": "Gate",
+          "contact_type": "schottky",
+          "address": "0x564ab23fab40"
+        },
+        {
+          "name": "Drain",
+          "contact_type": "ohmique",
+          "address": "0x564ab24be030"
+        },
+        {
+          "name": "Substrate",
+          "contact_type": "ohmique",
+          "address": "0x564aae2cf610"
+        }
+      ],
+      "materials": [
+        {
+          "name": "AlGaN",
+          "material": "AlGaN",
+          "parameter_file": "AlGaN",
+          "band_gap": "4.39 eV",
+          "permittivity": "11.9 Rel."
+        },
+        {
+          "name": "GaN",
+          "material": "GaN",
+          "parameter_file": "GaN",
+          "band_gap": "3.2 eV",
+          "permittivity": "11.9 Rel."
+        },
+        {
+          "name": "Substrate",
+          "material": "Si",
+          "parameter_file": "Si",
+          "band_gap": "1.12 eV",
+          "permittivity": "11.9 Rel."
+        }
+      ],
+      "geometry": {
+        "nodes": 12,
+        "lines": 14,
+        "surfaces": 3,
+        "x_range_um": [
+          0.0,
+          1.0
+        ],
+        "y_range_um": [
+          0.0,
+          0.45
+        ]
+      }
+    }
+  ],
+  "stimuli": [
+    {
+      "path": "/mnt/data/HeMT-GaN-Transistor/models/ecorce/lateral-gan-hemt/transfer_gate_0_to_5V.sti",
+      "format_version": "2.22",
+      "created": "2018-06-13 13:58:49",
+      "modified": "2022-04-13 09:44:59",
+      "analysis": "stationary",
+      "temperature": "300 K",
+      "biases": [
+        {
+          "contact": "Source",
+          "bias_type": "constante",
+          "constant": "0 V",
+          "start": null,
+          "end": null,
+          "increment": null
+        },
+        {
+          "contact": "Drain",
+          "bias_type": "constante",
+          "constant": "1 V",
+          "start": null,
+          "end": null,
+          "increment": null
+        },
+        {
+          "contact": "Substrate",
+          "bias_type": "constante",
+          "constant": "0 V",
+          "start": null,
+          "end": null,
+          "increment": null
+        },
+        {
+          "contact": "Gate",
+          "bias_type": "rampe_stationnaire",
+          "constant": null,
+          "start": "0 V",
+          "end": "5 V",
+          "increment": "0.1 V"
+        }
+      ],
+      "mesh": {
+        "max_nodes": "100000",
+        "minimum_edge": "0.01 um",
+        "spatial_precision": "0.01"
+      },
+      "solver": {
+        "newton_max_iterations": "40",
+        "gmres_max_iterations": "50",
+        "linear_tolerance": "1e-06",
+        "equation_tolerance": "1e-08"
+      }
+    }
+  ],
+  "validation": [
+    {
+      "device": "device.dev",
+      "stimulus": "transfer_gate_0_to_5V.sti",
+      "errors": []
+    }
+  ]
+}
