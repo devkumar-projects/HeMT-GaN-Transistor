@@ -1,8 +1,8 @@
 {
-  "directory": "/mnt/data/HeMT-GaN-Transistor/models/ecorce/lateral-gan-hemt",
+  "directory": ".",
   "devices": [
     {
-      "path": "/mnt/data/HeMT-GaN-Transistor/models/ecorce/lateral-gan-hemt/device.dev",
+      "path": "device.dev",
       "format_version": "2.22",
       "created": "2018-06-13 13:58:49",
       "modified": "2022-04-13 09:44:57",
@@ -23,23 +23,19 @@
       "contacts": [
         {
           "name": "Source",
-          "contact_type": "ohmique",
-          "address": "0x564ab1cfb9e0"
+          "contact_type": "ohmique"
         },
         {
           "name": "Gate",
-          "contact_type": "schottky",
-          "address": "0x564ab23fab40"
+          "contact_type": "schottky"
         },
         {
           "name": "Drain",
-          "contact_type": "ohmique",
-          "address": "0x564ab24be030"
+          "contact_type": "ohmique"
         },
         {
           "name": "Substrate",
-          "contact_type": "ohmique",
-          "address": "0x564aae2cf610"
+          "contact_type": "ohmique"
         }
       ],
       "materials": [
@@ -70,11 +66,11 @@
         "lines": 14,
         "surfaces": 3,
         "x_range_um": [
-          0.0,
-          1.0
+          0,
+          1
         ],
         "y_range_um": [
-          0.0,
+          0,
           0.45
         ]
       }
@@ -82,7 +78,7 @@
   ],
   "stimuli": [
     {
-      "path": "/mnt/data/HeMT-GaN-Transistor/models/ecorce/lateral-gan-hemt/transfer_gate_0_to_5V.sti",
+      "path": "transfer_gate_0_to_5V.sti",
       "format_version": "2.22",
       "created": "2018-06-13 13:58:49",
       "modified": "2022-04-13 09:44:59",
