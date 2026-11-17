@@ -381,3 +381,8 @@ Read **[NOTICE.md](NOTICE.md)** before redistributing model artifacts.
 **Research-stage disclaimer:** the numerical values are exploratory outputs,
 not component qualifications, safety ratings, fabrication guarantees,
 patentability opinions or investment claims.
+
+
+## Executable artifact audit on Kaggle
+
+[Auditing GaN Simulation Decks with Python](https://www.kaggle.com/code/devkumarkaggle/auditing-gan-simulation-decks-with-python) executes the repository's dependency-free inspector on losslessly embedded copies of the public lateral HEMT device/stimulus files, verifies their SHA-256 digests and deliberately tests an unknown-contact failure. This CPU-only, offline notebook inspects inputs; it does not execute Ecorce or validate the proposed vertical device. The [Engineering Workbench](https://huggingface.co/spaces/devkumarhf/Engineering-Workbench) connects this project to the broader control, robotics and engineering work.
