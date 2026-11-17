@@ -1,0 +1,29 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "VertiGaN: Exploratory GaN Device Study and Ecorce Deck Inspection Tools",
+  "description": "Exploratory semiconductor-device research archive with dependency-free Python tools for inspecting Ecorce device and stimulus decks. The recovered executable model is a lateral GaN HEMT; the proposed vertical concept is not a qualified device. Ecorce binaries and proprietary material libraries are excluded.",
+  "codeRepository": "https://github.com/devkumar-projects/HeMT-GaN-Transistor",
+  "url": "https://github.com/devkumar-projects/HeMT-GaN-Transistor",
+  "license": "https://spdx.org/licenses/MIT",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Dev",
+      "familyName": "Kumar",
+      "@id": "https://orcid.org/0009-0008-2279-9163"
+    }
+  ],
+  "programmingLanguage": [
+    "Python",
+    "Ecorce input language"
+  ],
+  "keywords": [
+    "gallium nitride",
+    "semiconductor modelling",
+    "research software",
+    "deck validation"
+  ],
+  "readme": "https://github.com/devkumar-projects/HeMT-GaN-Transistor/blob/main/README.md",
+  "issueTracker": "https://github.com/devkumar-projects/HeMT-GaN-Transistor/issues"
+}
