@@ -23,15 +23,9 @@ channels without sacrificing current capability.
 
 ## Research report
 
-The complete technical report is included here:
+The full research report is hosted on the portfolio:
 
-**[VertiGaN CNRS Research Internship Report (PDF)](report/VertiGaN_CNRS_Research_Internship_Report.pdf)**
-
-<p align="center">
-  <a href="report/VertiGaN_CNRS_Research_Internship_Report.pdf">
-    <img src="assets/figures/report-cover.png" width="360" alt="VertiGaN report cover">
-  </a>
-</p>
+**[VertiGaN: Numerical Study and Reanalysis of a Vertical GaN Transistor Concept (PDF)](https://dev-kumar.com/reports/vertigan.pdf)**
 
 ## Research question
 
@@ -247,7 +241,6 @@ HeMT-GaN-Transistor/
 │   ├── device.dev                 # Available 2-D AlGaN/GaN benchmark
 │   ├── transfer_gate_0_to_5V.sti
 │   └── model-manifest.json
-├── report/                        # Full research report PDF
 ├── tests/                         # Parser and deck-consistency tests
 ├── tools/
 │   ├── ecorce_deck.py             # Static Ecorce deck inspector
@@ -367,7 +360,7 @@ The detailed programme is in **[Scientific and innovation roadmap](docs/SCIENTIF
 
 ## Citation
 
-Use the metadata in [`CITATION.cff`](CITATION.cff) and cite the included report.
+Use the metadata in [`CITATION.cff`](CITATION.cff) and cite the full report linked above.
 
 ## Licence and third-party boundaries
 
@@ -386,3 +379,5 @@ patentability opinions or investment claims.
 ## Executable artifact audit on Kaggle
 
 [Auditing GaN Simulation Decks with Python](https://www.kaggle.com/code/devkumarkaggle/auditing-gan-simulation-decks-with-python) executes the repository's dependency-free inspector on losslessly embedded copies of the public lateral HEMT device/stimulus files, verifies their SHA-256 digests and deliberately tests an unknown-contact failure. This CPU-only, offline notebook inspects inputs; it does not execute Ecorce or validate the proposed vertical device. The [Engineering Workbench](https://huggingface.co/spaces/devkumarhf/Engineering-Workbench) connects this project to the broader control, robotics and engineering work.
+
+The linked manuscript is hosted on the portfolio. Its authors and distribution terms are stated in the PDF; the software licence does not relicense the manuscript.
